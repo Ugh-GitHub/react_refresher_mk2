@@ -8,7 +8,9 @@ class About extends Component {
       return (
         
           <div>
-            
+            <header className="App-header">
+                <h2 className="Page-title">About</h2>
+            </header>
           </div>
         
       );
@@ -16,7 +18,8 @@ class About extends Component {
     
   }
   
-  const putReduxStateOnProps = (reduxState) => ({reduxState});
+//   const putReduxStateOnProps = (reduxState) => ({reduxState});
   
   const AboutWithRouter = withRouter(About);
-  export default connect(putReduxStateOnProps)(AboutWithRouter);
+//   export default connect(putReduxStateOnProps)(AboutWithRouter);
+  export default connect()(AboutWithRouter);

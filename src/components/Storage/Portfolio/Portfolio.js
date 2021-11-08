@@ -8,7 +8,9 @@ class Portfolio extends Component {
       return (
         
           <div>
-            
+            <header className="App-header">
+                <h2 className="Page-title">Contact</h2>
+            </header>
           </div>
         
       );
@@ -16,7 +18,8 @@ class Portfolio extends Component {
     
   }
   
-  const putReduxStateOnProps = (reduxState) => ({reduxState});
+//   const putReduxStateOnProps = (reduxState) => ({reduxState});
   
   const PortfolioWithRouter = withRouter(Portfolio);
-  export default connect(putReduxStateOnProps)(PortfolioWithRouter);
+//   export default connect(putReduxStateOnProps)(PortfolioWithRouter);
+  export default connect()(PortfolioWithRouter);

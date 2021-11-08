@@ -8,7 +8,9 @@ class Contact extends Component {
       return (
         
           <div>
-            
+            <header className="App-header">
+                <h2 className="Page-title">Contact</h2>
+            </header>
           </div>
         
       );
@@ -16,7 +18,8 @@ class Contact extends Component {
     
   }
   
-  const putReduxStateOnProps = (reduxState) => ({reduxState});
+//   const putReduxStateOnProps = (reduxState) => ({reduxState});
   
   const ContactWithRouter = withRouter(Contact);
-  export default connect(putReduxStateOnProps)(ContactWithRouter);
+//   export default connect(putReduxStateOnProps)(ContactWithRouter);
+  export default connect()(ContactWithRouter);
