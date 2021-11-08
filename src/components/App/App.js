@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { HashRouter as Router, Route} from 'react-router-dom';
-import About from '../About';
-import Contact from '../Contact';
-import Resume from '../Resume';
-import Portfolio from '../Portfolio';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
+import Resume from '../Resume/Resume';
+import Portfolio from '../Portfolio/Portfolio';
 
 
 class App extends Component {
