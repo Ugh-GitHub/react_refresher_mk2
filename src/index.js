@@ -14,7 +14,7 @@ import Axios from 'axios';
 
 // Create the rootSaga generator function
 function* rootSaga() {
-    yield takeEvery('TEST_SAGAS', testSagas);
+    // yield takeEvery('TEST_SAGAS', testSagas);
     yield takeEvery('GET_MOVIES', getMovies);
     yield takeEvery('DETAIL_INFO_GET',getMovieDetails);
     yield takeEvery('GET_ITEM_GENRE',specificGenreGet);
@@ -23,9 +23,9 @@ function* rootSaga() {
 }
 
 // Sagas go here
-function* testSagas() {
-    console.log("Sagas Seaworthy");
-}
+// function* testSagas() {
+//     console.log("Sagas Seaworthy");
+// }
 
 function* postNewMovie(action) {
     try {
