@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Link, withRouter } from 'react-router-dom';
+import { BrowserRouter as Link} from 'react-router-dom';
 import Details from '../Details/Details';
 
 
@@ -40,5 +40,4 @@ class MovieItem extends Component {
 
 const putReduxStateOnProps = (reduxState) => ({reduxState});
 
-const MovieItemWithRouter = withRouter(MovieItem);
-export default connect(putReduxStateOnProps)(MovieItemWithRouter);
+export default connect(putReduxStateOnProps)(MovieItem);

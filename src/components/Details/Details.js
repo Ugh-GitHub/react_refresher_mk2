@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 
 
 class Details extends Component {
@@ -50,5 +49,5 @@ class Details extends Component {
 
 const putReduxStateOnProps = (reduxState) => ({reduxState});
 
-const DetailsWithRouter = withRouter(Details);
-export default connect(putReduxStateOnProps)(DetailsWithRouter);
+
+export default connect(putReduxStateOnProps)(Details);
