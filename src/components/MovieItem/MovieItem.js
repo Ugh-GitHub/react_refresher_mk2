@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BrowserRouter as Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Details from '../Details/Details';
 
 
@@ -24,7 +24,9 @@ class MovieItem extends Component {
           
             <div class="cards">
               <div class="card">
-                <img key={this.props.movie.id} src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
+                <NavLink to={`/details/${this.props.movie.id}`}>
+                  <img key={this.props.movie.id} src={this.props.movie.poster} alt={this.props.movie.title}/>
+                </NavLink>
                 <div class="container">
                   <h4><b>{this.props.movie.title}</b></h4>
                 </div>
