@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { HashRouter as Link, withRouter } from 'react-router-dom';
+// import {BrowserRouter as Router, Switch, Route, useParams} from "react-router-dom";
 
 
 class Details extends Component {
@@ -49,5 +51,5 @@ class Details extends Component {
 
 const putReduxStateOnProps = (reduxState) => ({reduxState});
 
-
-export default connect(putReduxStateOnProps)(Details);
+const DetailsWithRouter = withRouter(Details);
+export default connect(putReduxStateOnProps)(DetailsWithRouter);

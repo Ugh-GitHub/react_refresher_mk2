@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import { withRouter } from 'react-router-dom';
 
 
 class AddMovie extends Component {
@@ -77,6 +77,5 @@ class AddMovie extends Component {
 }
 
 const putReduxStateOnProps = (reduxState) => ({reduxState});
-
-
-export default connect(putReduxStateOnProps)(AddMovie);
+const AddMovieWithRouter = withRouter(AddMovie);
+export default connect(putReduxStateOnProps)(AddMovieWithRouter);

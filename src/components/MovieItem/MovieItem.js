@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Details from '../Details/Details';
-
+import { withRouter } from 'react-router-dom';
 
 
 class MovieItem extends Component {
@@ -24,9 +24,7 @@ class MovieItem extends Component {
           
             <div class="cards">
               <div class="card">
-                <NavLink to={`/details/${this.props.movie.id}`}>
-                  <img key={this.props.movie.id} src={this.props.movie.poster} alt={this.props.movie.title}/>
-                </NavLink>
+                <img key={this.props.movie.id} src={this.props.movie.poster} alt={this.props.movie.title} onClick={this.goToDetails}/>
                 <div class="container">
                   <h4><b>{this.props.movie.title}</b></h4>
                 </div>
@@ -41,5 +39,5 @@ class MovieItem extends Component {
 }
 
 const putReduxStateOnProps = (reduxState) => ({reduxState});
-
-export default connect(putReduxStateOnProps)(MovieItem);
+const MovieItemWithRouter = withRouter(MovieItem);
+export default connect(putReduxStateOnProps)(MovieItemWithRouter);

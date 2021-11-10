@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import './App.css';
 import MovieList from '../MovieList/MovieList';
 import Details from '../Details/Details';
@@ -21,12 +21,10 @@ class App extends Component {
         <h1>Movies!</h1>
           {/* <Link to="/addmovie">Add a Movie!</Link> */}
           {/* ADD PAGES! */}
-          <Routes>
-            <Route path='/' element={<MovieList />}/>
-            {/* Might need to update component={MovieList} to element={<MovieList />} */}
-            <Route path='/details/:id' element={<Details />}/>
-            <Route path='/addmovie' element={<AddMovie />}/>
-          </Routes>
+          
+          <Route exact path='/' component={MovieList}/>
+          <Route exact path='/details/:id' component={Details}/>
+          <Route exact path='/addmovie' component={AddMovie}/>
       </div>
       </Router>
     );
