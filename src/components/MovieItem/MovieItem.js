@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Details from '../Details/Details';
 import { withRouter } from 'react-router-dom';
+import Card from '@mui/material';
 
 
 class MovieItem extends Component {
